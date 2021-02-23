@@ -33,12 +33,12 @@ p {
 
 .nav {
   background-color: transparent;
-  transition: 0.3s ease;
+  transition: 0.3s linear;
 }
 
 .nav.scrolled {
   background-color: white;
-  transition: 0.5s ease;
+  transition: 0.5s linear;
 }
 
 #header .navbar {
@@ -52,6 +52,37 @@ p {
   padding: 30px 60px;
   background: #fff;
 }
+
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link.scrolled {
+  color: #3f4451;
+}
+
+#header .navbar a:hover {
+  text-decoration: underline;
+}
+
+#header .nav-item.sign {
+  padding: 1px 10px;
+  border: 1px solid #00aff0;
+  border-top-left-radius: 45px;
+  border-bottom-left-radius: 45px;
+  border-top-right-radius: 45px;
+  background-color: #fff;
+  text-decoration: none;
+}
+
+#header .nav-item.sign:hover {
+  box-shadow: 0px 20px 24px 0px rgba(0, 11, 40, 0.1);
+}
+
+#header .nav-item.sign .nav-link {
+  color: #00aff0;
+}
+
 
 /* slider */
 
@@ -105,6 +136,21 @@ p {
   top: 10px;
   left: 250px;
   max-width: 50%;
+  animation: jump 2.5s infinite;
+}
+
+@keyframes jump {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(0px, -20px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
 }
 
 /* feature */
@@ -121,7 +167,7 @@ p {
   position: absolute;
   top: -60px;
   left: 10px;
-  max-width: 100%;
+  max-width: 90%;
 }
 
 .feature .img_message {
@@ -132,6 +178,7 @@ p {
 }
 
 .f_content .icon {
+  margin-left: -25px;
   height: 105px;
   width: 105px;
 }
@@ -143,7 +190,7 @@ p {
 .f_content i {
   position: absolute;
   top: 28px;
-  left: 58px;
+  left: 33px;
   z-index: 2;
   font-size: 20px;
   color: #fff;
@@ -170,6 +217,7 @@ p {
 }
 
 .f_content2 .icon {
+  margin-left: -25px;
   height: 105px;
   width: 105px;
 }
@@ -181,7 +229,7 @@ p {
 .f_content2 i {
   position: absolute;
   top: 28px;
-  left: 57px;
+  left: 32px;
   z-index: 2;
   font-size: 20px;
   color: #fff;
@@ -352,12 +400,9 @@ p {
 }
 
 .pricing .price_btn:hover {
-  padding: 15px 40px;
   border: 1px solid #00aff0;
-  border-radius: 45px;
   color: #fff;
   background-color: #00aff0;
-  text-decoration: none;
 }
 
 /* device */
@@ -387,6 +432,12 @@ p {
   background-color: #fff;
   color: #00aff0;
   text-decoration: none;
+}
+
+.device .action_btn:hover {
+  border: 1px solid #00aff0;
+  color: #fff;
+  background-color: #00aff0;
 }
 
 .device img {
